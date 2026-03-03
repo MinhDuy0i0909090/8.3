@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "nam",
+    "name": "Nam",
+    "wish": "Chúc Nam luôn xinh đẹp, tự tin và hạnh phúc trong từng khoảnh khắc!",
+    "video": "/assets/tiktok_video_hd.mp4",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FADADD, #FFE5EC)",
+      "primary": "#F4A6B8",
+      "secondary": "#FFC1D6",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "slug": "linh",
+    "name": "Linh",
+    "wish": "Gửi đến Linh những lời chúc ngọt ngào nhất. Mong em luôn được yêu thương!",
+    "video": "https://assets.mixkit.co/videos/preview/mixkit-heart-shaped-balloons-floating-in-the-blue-sky-4241-large.mp4",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFE5B4, #FADADD)",
+      "primary": "#FFB7C5",
+      "secondary": "#FFD1A8",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "slug": "ha",
+    "name": "Hà",
+    "wish": "Chúc Hà luôn dịu dàng, an yên và gặp thật nhiều điều tốt đẹp!",
+    "video": "https://assets.mixkit.co/videos/preview/mixkit-red-and-gold-chinese-new-year-lanterns-hanging-9162-large.mp4",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #F3D1F4, #FFE5EC)",
+      "primary": "#D18CE0",
+      "secondary": "#F1A7C8",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "slug": "minh",
+    "name": "Minh",
+    "wish": "Chúc Minh luôn rạng rỡ, yêu đời và tràn đầy năng lượng tích cực!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFF0F5, #FADADD)",
+      "primary": "#F2A1C7",
+      "secondary": "#F8C8DC",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "slug": "le",
+    "name": "Lệ",
+    "wish": "Chúc Lệ luôn nhẹ nhàng, tinh tế và hạnh phúc theo cách riêng!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
+      "primary": "#FFB5C2",
+      "secondary": "#FFD6A5",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "slug": "nguyen",
+    "name": "Nguyên",
+    "wish": "Chúc Nguyên luôn bình an, xinh đẹp và vững vàng trên hành trình của mình!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FADADD, #F3D1F4)",
+      "primary": "#E6A0C4",
+      "secondary": "#D8B4E2",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "slug": "trang",
+    "name": "Trang",
+    "wish": "Chúc Trang luôn tỏa sáng, dịu dàng và đầy nữ tính!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFF4CC, #FFE5EC)",
+      "primary": "#FFD966",
+      "secondary": "#FFB7C5",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "slug": "thinh",
+    "name": "Thịnh",
+    "wish": "Chúc Thịnh luôn xinh đẹp, mạnh mẽ và yêu thương chính mình!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFE5EC, #FADADD)",
+      "primary": "#F7A1B5",
+      "secondary": "#FFC1D6",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.3)"
+    }
+  },
+  {
+    "slug": "phuong",
+    "name": "Phương",
+    "wish": "Chúc Phương luôn dịu dàng, an nhiên và tràn đầy yêu thương!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #F3D1F4, #FFF0F5)",
+      "primary": "#D9A0E5",
+      "secondary": "#F1A7C8",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "slug": "duy",
+    "name": "Duy",
+    "wish": "Chúc Duy luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
+      "primary": "#FF9EB5",
+      "secondary": "#FFD6A5",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  }
+]
