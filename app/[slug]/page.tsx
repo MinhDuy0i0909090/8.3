@@ -713,7 +713,7 @@ export default function DynamicWishPage() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
-            className="z-30 flex flex-col items-center gap-12"
+            className="z-30 flex flex-col items-center gap-16"
           >
             <h2 className="text-3xl font-dancing text-gray-900 drop-shadow-lg italic">
               Có một phong thư gửi đến {name}...
@@ -741,8 +741,8 @@ export default function DynamicWishPage() {
                 <div className="flap"></div>
                 <div className="envelope__side-left"></div>
                 <div className="envelope__side-right"></div>
-                <div className="letter p-15 flex flex-col items-center">
-                  <p className="text-zinc-800 text-xl leading-relaxed font-dancing font-bold whitespace-pre-wrap typing-cursor mb-auto">
+                <div className="letter flex flex-col items-center">
+                  <p className="text-zinc-800 text-2xl leading-relaxed font-dancing whitespace-pre-wrap typing-cursor mb-auto">
                     {textVisible}
                   </p>
                   <AnimatePresence>
@@ -791,7 +791,7 @@ export default function DynamicWishPage() {
             exit={{ opacity: 0, scale: 1.2 }}
             className="z-30 flex flex-col items-center gap-12"
           >
-            <h2 className="text-4xl font-playfair font-black text-white drop-shadow-2xl text-center px-4">
+            <h2 className="text-4xl font-dancing  font-black text-gray-900 drop-shadow-2xl text-center px-4">
               Món quà từ trái tim
             </h2>
 
@@ -831,7 +831,7 @@ export default function DynamicWishPage() {
               </motion.div>
             </div>
             {!giftOpened && (
-              <p className="text-white tracking-widest uppercase text-lg">
+              <p className=" tracking-widest text-gray-900 uppercase text-md">
                 Chạm để mở hộp quà
               </p>
             )}

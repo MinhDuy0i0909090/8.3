@@ -1,8 +1,8 @@
 [
   {
-    "slug": "nam",
-    "name": "Nam",
-    "wish": "Chúc Nam luôn xinh đẹp, tự tin và hạnh phúc trong từng khoảnh khắc!",
+    "slug": "thinh",
+    "name": "Thịnh",
+    "wish": "Chúc Thịnh luôn xinh đẹp, tự tin và hạnh phúc trong từng khoảnh khắc!",
     "video": "/assets/tiktok_video_hd.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FADADD, #FFE5EC)",
@@ -13,9 +13,9 @@
     }
   },
   {
-    "slug": "linh",
-    "name": "Linh",
-    "wish": "Gửi đến Linh những lời chúc ngọt ngào nhất. Mong em luôn được yêu thương!",
+    "slug": "thuy",
+    "name": "Thuý",
+    "wish": "Gửi đến Thuý những lời chúc ngọt ngào nhất. Mong em luôn được yêu thương!",
     "video": "https://assets.mixkit.co/videos/preview/mixkit-heart-shaped-balloons-floating-in-the-blue-sky-4241-large.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5B4, #FADADD)",
@@ -26,9 +26,9 @@
     }
   },
   {
-    "slug": "ha",
-    "name": "Hà",
-    "wish": "Chúc Hà luôn dịu dàng, an yên và gặp thật nhiều điều tốt đẹp!",
+    "slug": "trang",
+    "name": "Trang",
+    "wish": "Chúc Trang luôn dịu dàng, an yên và gặp thật nhiều điều tốt đẹp!",
     "video": "https://assets.mixkit.co/videos/preview/mixkit-red-and-gold-chinese-new-year-lanterns-hanging-9162-large.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #F3D1F4, #FFE5EC)",
@@ -39,9 +39,9 @@
     }
   },
   {
-    "slug": "minh",
-    "name": "Minh",
-    "wish": "Chúc Minh luôn rạng rỡ, yêu đời và tràn đầy năng lượng tích cực!",
+    "slug": "lanh",
+    "name": "Lành",
+    "wish": "Chúc Lành luôn rạng rỡ, yêu đời và tràn đầy năng lượng tích cực!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFF0F5, #FADADD)",
@@ -65,9 +65,9 @@
     }
   },
   {
-    "slug": "nguyen",
-    "name": "Nguyên",
-    "wish": "Chúc Nguyên luôn bình an, xinh đẹp và vững vàng trên hành trình của mình!",
+    "slug": "tuyet",
+    "name": "Tuyết",
+    "wish": "Chúc Tuyết luôn bình an, xinh đẹp và vững vàng trên hành trình của mình!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #FADADD, #F3D1F4)",
@@ -78,9 +78,9 @@
     }
   },
   {
-    "slug": "trang",
-    "name": "Trang",
-    "wish": "Chúc Trang luôn tỏa sáng, dịu dàng và đầy nữ tính!",
+    "slug": "hoa",
+    "name": "Hoa",
+    "wish": "Chúc Hoa luôn tỏa sáng, dịu dàng và đầy nữ tính!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFF4CC, #FFE5EC)",
@@ -91,9 +91,9 @@
     }
   },
   {
-    "slug": "thinh",
-    "name": "Thịnh",
-    "wish": "Chúc Thịnh luôn xinh đẹp, mạnh mẽ và yêu thương chính mình!",
+    "slug": "phuong",
+    "name": "Phương",
+    "wish": "Chúc Phương luôn xinh đẹp, mạnh mẽ và yêu thương chính mình!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FADADD)",
@@ -104,9 +104,9 @@
     }
   },
   {
-    "slug": "phuong",
-    "name": "Phương",
-    "wish": "Chúc Phương luôn dịu dàng, an nhiên và tràn đầy yêu thương!",
+    "slug": "giang",
+    "name": "Giang",
+    "wish": "Chúc Giang luôn dịu dàng, an nhiên và tràn đầy yêu thương!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #F3D1F4, #FFF0F5)",
@@ -117,9 +117,22 @@
     }
   },
   {
-    "slug": "duy",
-    "name": "Duy",
-    "wish": "Chúc Duy luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
+    "slug": "linh",
+    "name": "Linh",
+    "wish": "Chúc Linh luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
+    "video": "",
+    "theme": {
+      "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
+      "primary": "#FF9EB5",
+      "secondary": "#FFD6A5",
+      "textColor": "#ffffff",
+      "cardBg": "rgba(255, 255, 255, 0.35)"
+    }
+  },
+  {
+    "slug": "hong",
+    "name": "Hồng",
+    "wish": "Chúc Hồng luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
     "video": "",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
