@@ -715,7 +715,7 @@ export default function DynamicWishPage() {
             exit={{ opacity: 0, y: -100 }}
             className="z-30 flex flex-col items-center gap-12"
           >
-            <h2 className="text-3xl font-dancing text-white drop-shadow-lg italic">
+            <h2 className="text-3xl font-dancing text-gray-900 drop-shadow-lg italic">
               Có một phong thư gửi đến {name}...
             </h2>
 
@@ -741,45 +741,44 @@ export default function DynamicWishPage() {
                 <div className="flap"></div>
                 <div className="envelope__side-left"></div>
                 <div className="envelope__side-right"></div>
-                <div className="letter p-15 flex flex-col">
-                  <p className="text-zinc-800 text-xl leading-relaxed font-dancing font-bold whitespace-pre-wrap typing-cursor">
+                <div className="letter p-15 flex flex-col items-center">
+                  <p className="text-zinc-800 text-xl leading-relaxed font-dancing font-bold whitespace-pre-wrap typing-cursor mb-auto">
                     {textVisible}
                   </p>
+                  <AnimatePresence>
+                    {showNextBtn && (
+                      <motion.button
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setStage(SECTIONS.GIFT);
+                        }}
+                        className="mt-6 px-8 py-3 rounded-full font-bold text-white shadow-xl flex items-center gap-2 group mx-auto z-50 text-base"
+                        style={{
+                          background: `linear-gradient(45deg, ${theme.primary}, ${theme.secondary})`,
+                        }}
+                      >
+                        Nhận quà bất ngờ{" "}
+                        <motion.div
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{
+                            repeat: Infinity,
+                            duration: 1,
+                            ease: "easeInOut",
+                          }}
+                        >
+                          <ChevronRight className="w-5 h-5" />
+                        </motion.div>
+                      </motion.button>
+                    )}
+                  </AnimatePresence>
                 </div>
                 <div className="pocket"></div>
               </div>
             </div>
-
-            <AnimatePresence>
-              {showNextBtn && (
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setStage(SECTIONS.GIFT);
-                  }}
-                  className="mt-5 px-12 py-5 rounded-full font-bold text-white shadow-2xl flex items-center gap-3 group"
-                  style={{
-                    background: `linear-gradient(45deg, ${theme.primary}, ${theme.secondary})`,
-                  }}
-                >
-                  Nhận quà bất ngờ{" "}
-                  <motion.div
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 1,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <ChevronRight />
-                  </motion.div>
-                </motion.button>
-              )}
-            </AnimatePresence>
           </motion.div>
         )}
 

@@ -1,7 +1,9 @@
 "use client";
-import React, { useState, useEffect, useMemo } from "react";
+
+import React, { useState, useEffect, useMemo, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Gift, Play, ChevronRight } from "lucide-react";
+import { Gift, Play, ChevronRight } from "lucide-react";
+import FloatingHearts from "@/components/FloatingHearts"; // Đã sửa đường dẫn import bằng alias @
 
 const SECTIONS = {
   INTRO: "intro",
@@ -10,58 +12,8 @@ const SECTIONS = {
   VIDEO: "video",
 };
 
-/* --- Sub-component: Floating Hearts --- */
-const FloatingHearts = () => {
-  const [hearts, setHearts] = useState<any[]>([]);
-
-  useEffect(() => {
-    const generated = [...Array(20)].map((_, i) => ({
-      id: i,
-      xInit: -100,
-      yInit: Math.random() * 1000,
-      duration: 10 + Math.random() * 15,
-      delay: Math.random() * 20,
-      size: 20 + Math.random() * 40,
-    }));
-    setHearts(generated);
-  }, []);
-
-  if (hearts.length === 0) return null;
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {hearts.map((h) => (
-        <motion.div
-          key={h.id}
-          initial={{ x: h.xInit, y: h.yInit, opacity: 0, scale: 0 }}
-          animate={{
-            x: 1500,
-            y: -500,
-            opacity: [0, 0.4, 0],
-            scale: [0.5, 1.2, 0.5],
-            rotate: 360,
-          }}
-          transition={{
-            duration: h.duration,
-            repeat: Infinity,
-            delay: h.delay,
-            ease: "linear",
-          }}
-          className="absolute"
-        >
-          <Heart
-            className="text-pink-500 fill-current"
-            size={h.size}
-            style={{ filter: "blur(2px)" }}
-          />
-        </motion.div>
-      ))}
-    </div>
-  );
-};
-
 /* --- Sub-component: Flower Garden (CSS based) --- */
-const FlowerGarden = () => {
+const FlowerGarden = memo(() => {
   const leaves = useMemo(() => {
     return [...Array(10)].map((_, i) => i);
   }, []);
@@ -132,7 +84,9 @@ const FlowerGarden = () => {
       </div>
     </div>
   );
-};
+});
+
+FlowerGarden.displayName = "FlowerGarden";
 
 export default function InternationalWomensDay() {
   const [stage, setStage] = useState(SECTIONS.INTRO);
@@ -154,134 +108,127 @@ export default function InternationalWomensDay() {
 
   // Typing effect
   useEffect(() => {
-    if (envelopeOpen) {
+    if (stage === SECTIONS.ENVELOPE && envelopeOpen) {
       let i = 0;
-      const interval = setInterval(() => {
-        setTextVisible((prev) => prev + fullMessage.charAt(i));
+      setTextVisible("");
+      const typingInterval = setInterval(() => {
+        setTextVisible(fullMessage.substring(0, i));
         i++;
-        if (i >= fullMessage.length) {
-          clearInterval(interval);
-          setTimeout(() => setShowNextBtn(true), 1000);
+        if (i > fullMessage.length) {
+          clearInterval(typingInterval);
+          setShowNextBtn(true);
         }
-      }, 50);
-      return () => clearInterval(interval);
+      }, 50); // Adjust typing speed here
+      return () => clearInterval(typingInterval);
     }
-  }, [envelopeOpen, fullMessage]);
+  }, [stage, envelopeOpen, fullMessage]);
 
   return (
-    <main className="relative min-h-screen w-full bg-[#0a0a0a] overflow-hidden flex items-center justify-center font-outfit">
-      <FloatingHearts />
+    <main className="relative flex min-h-screen flex-col items-center justify-between overflow-hidden bg-gradient-to-br from-pink-300 via-purple-300 to-indigo-400 p-4 font-sans text-white">
+      <FloatingHearts /> {/* Sử dụng component FloatingHearts đã tối ưu */}
       <FlowerGarden />
-
-      <AnimatePresence mode="wait">
-        {/* STAGE: INTRO */}
-        {stage === SECTIONS.INTRO && (
-          <motion.div
-            key="intro"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
-            className="z-10 text-center space-y-8"
+      {/* STAGE: INTRO */}
+      {stage === SECTIONS.INTRO && (
+        <motion.div
+          key="intro"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="z-10 flex h-full w-full flex-col items-center justify-center text-center"
+        >
+          <motion.h1
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+            className="mb-4 text-4xl font-bold lg:text-6xl"
           >
-            <motion.div
-              animate={{ rotate: [0, 10, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4 }}
-              className="inline-block p-6 glass-card border-none bg-pink-500/20"
-            >
-              <Heart className="w-16 h-16 text-pink-500 fill-current" />
-            </motion.div>
-            <h1 className="text-6xl lg:text-[7rem] font-playfair font-black tracking-tight leading-none text-white drop-shadow-2xl">
-              Happy <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-600">
-                8.3 Day
-              </span>
-            </h1>
-            <p className="text-zinc-500 tracking-[0.3em] uppercase text-sm font-bold">
-              Hãy để những mầm xanh lớn lên...
-            </p>
-          </motion.div>
-        )}
-
-        {/* STAGE: ENVELOPE */}
-        {stage === SECTIONS.ENVELOPE && (
-          <motion.div
-            key="envelope"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            className="z-10 flex flex-col items-center gap-12"
+            Happy Women's Day!
+          </motion.h1>
+          <motion.p
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            className="text-lg lg:text-xl"
           >
-            <h2 className="text-2xl font-dancing text-pink-300 italic">
-              Chạm vào phong thư phía dưới nhé...
-            </h2>
-
+            Một món quà nhỏ dành tặng bạn
+          </motion.p>
+        </motion.div>
+      )}
+      {/* STAGE: ENVELOPE */}
+      {stage === SECTIONS.ENVELOPE && (
+        <motion.div
+          key="envelope"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.5 }}
+          className="z-10 flex h-full w-full flex-col items-center justify-center"
+        >
+          <motion.div
+            className={`relative w-[300px] cursor-pointer rounded-lg shadow-xl transition-all duration-500 lg:w-[400px] ${envelopeOpen ? "h-[400px] bg-white" : "h-[200px] bg-red-500"}`}
+            onClick={() => setEnvelopeOpen(!envelopeOpen)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             <div
-              className={`envelope-wrapper ${envelopeOpen ? "pt-40" : ""} transition-all duration-1000`}
-              onClick={() => setEnvelopeOpen(true)}
+              className={`absolute inset-0 flex items-center justify-center p-4 text-center text-white transition-opacity duration-500 ${envelopeOpen ? "opacity-0" : "opacity-100"}`}
             >
-              <div
-                className={`envelope ${envelopeOpen ? "open" : "animate-float shadow-2xl shadow-pink-500/20"}`}
-              >
-                <div className="flap"></div>
-                <div className="letter glass-card border-none !bg-white !shadow-none p-8 flex flex-col">
-                  <p className="text-zinc-800 text-lg leading-relaxed font-dancing font-bold whitespace-pre-wrap typing-cursor">
-                    {textVisible}
-                  </p>
-                </div>
-                <div className="front"></div>
-              </div>
+              <p className="text-2xl font-bold">Mở thư này nhé!</p>
             </div>
 
             <AnimatePresence>
-              {showNextBtn && (
-                <motion.button
-                  initial={{ opacity: 0, y: 20 }}
+              {envelopeOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setStage(SECTIONS.GIFT)}
-                  className="mt-12 px-10 py-5 bg-gradient-to-r from-pink-600 to-rose-500 rounded-full font-bold text-white shadow-xl flex items-center gap-3 group"
+                  exit={{ opacity: 0, y: 50 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  className="absolute inset-0 flex flex-col items-center justify-center p-6 text-gray-800"
                 >
-                  Mở quà thôi nào{" "}
-                  <ChevronRight className="group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                  <p className="whitespace-pre-line text-center text-base leading-relaxed lg:text-lg">
+                    {textVisible}
+                  </p>
+                  {showNextBtn && (
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 1, duration: 0.5 }}
+                      onClick={() => setStage(SECTIONS.GIFT)}
+                      className="mt-6 flex items-center gap-2 rounded-full bg-pink-500 px-6 py-3 text-white shadow-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50"
+                    >
+                      Tiếp theo <ChevronRight className="h-5 w-5" />
+                    </motion.button>
+                  )}
+                </motion.div>
               )}
             </AnimatePresence>
           </motion.div>
-        )}
-
-        {/* STAGE: GIFT BOX */}
-        {stage === SECTIONS.GIFT && (
+        </motion.div>
+      )}
+      {/* STAGE: GIFT REVEAL */}
+      {stage === SECTIONS.GIFT && (
+        <motion.div
+          key="gift"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.5 }}
+          className="z-10 flex h-full w-full flex-col items-center justify-center"
+        >
           <motion.div
-            key="gift"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.2 }}
-            className="z-10 flex flex-col items-center gap-12"
+            className={`relative flex h-[250px] w-[250px] cursor-pointer items-center justify-center rounded-2xl bg-gradient-to-br from-yellow-300 to-orange-500 shadow-2xl transition-all duration-500 lg:h-[300px] lg:w-[300px] ${giftOpened ? "rotate-45 scale-75 opacity-0" : ""}`}
+            onClick={() => setGiftOpened(true)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <h2 className="text-4xl font-playfair font-black text-rose-300">
-              A Surprise for You!
-            </h2>
-
+            <Gift className="h-32 w-32 text-white" />
             <div
-              className="relative group cursor-pointer"
-              onClick={() => setGiftOpened(true)}
+              className={`absolute inset-0 flex items-center justify-center text-center text-white transition-opacity duration-500 ${giftOpened ? "opacity-0" : "opacity-100"}`}
             >
-              {/* Gift Box Animation */}
-              <motion.div
-                animate={
-                  giftOpened
-                    ? { y: -200, opacity: 0, rotate: 20 }
-                    : { y: 0, scale: [1, 1.05, 1] }
-                }
-                transition={{ duration: 0.8, y: { ease: "circIn" } }}
-                className="z-20 relative"
-              >
-                <Gift className="w-64 h-64 text-rose-500 fill-current drop-shadow-[0_0_30px_rgba(244,63,94,0.5)]" />
-                <div className="absolute inset-0 bg-white/10 blur-xl scale-125 rounded-full -z-10 group-hover:bg-white/20 transition-colors" />
-              </motion.div>
+              <p className="text-2xl font-bold">Nhấn để mở quà!</p>
+            </div>
 
-              {/* Content revealed inside box */}
+            <div className="absolute inset-0">
               <AnimatePresence>
                 {giftOpened && (
                   <motion.div
@@ -311,49 +258,41 @@ export default function InternationalWomensDay() {
               </p>
             )}
           </motion.div>
-        )}
-
-        {/* STAGE: VIDEO REVEAL */}
-        {stage === SECTIONS.VIDEO && (
+        </motion.div>
+      )}
+      {/* STAGE: VIDEO REVEAL */}
+      {stage === SECTIONS.VIDEO && (
+        <motion.div
+          key="video"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black p-4 lg:p-20"
+        >
           <motion.div
-            key="video"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="fixed inset-0 z-50 bg-black flex items-center justify-center p-4 lg:p-20"
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="relative aspect-video w-full max-w-4xl rounded-lg shadow-2xl"
           >
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              className="relative w-full max-w-5xl aspect-video glass-card border-none overflow-hidden rounded-[40px] shadow-[0_0_100px_rgba(255,75,43,0.3)] bg-zinc-900"
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0&showinfo=0&rel=0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            ></iframe>
+            <button
+              onClick={() => setStage(SECTIONS.INTRO)}
+              className="absolute -right-4 -top-4 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-800 shadow-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
             >
-              <video
-                src="https://assets.mixkit.co/videos/preview/mixkit-valentines-day-gift-box-with-a-red-ribbon-4414-large.mp4"
-                className="w-full h-full object-cover"
-                autoPlay
-                loop
-                controls
-              />
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2 }}
-                className="absolute bottom-8 right-8 flex gap-4"
-              >
-                <button
-                  onClick={() => setStage(SECTIONS.INTRO)}
-                  className="px-8 py-3 glass-card bg-white/10 hover:bg-white/20 text-white font-bold rounded-full transition-all"
-                >
-                  Xem lại từ đầu
-                </button>
-              </motion.div>
-            </motion.div>
+              <ChevronRight className="h-6 w-6 rotate-180" />
+            </button>
           </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* <footer className="fixed bottom-8 left-1/2 -translate-x-1/2 z-20 text-zinc-600 text-xs tracking-widest uppercase font-bold pointer-events-none">
-        Special Gift • International Women&apos;s Day • MMXXV
-      </footer> */}
+        </motion.div>
+      )}
     </main>
   );
 }
