@@ -700,7 +700,9 @@ export default function DynamicWishPage() {
                 className="text-6xl lg:text-8xl font-playfair font-black text-white text-center drop-shadow-2xl z-50  translate-y-[-20vh]"
               >
                 Dành cho <br />
-                <span style={{ color: theme.primary }}>{name}</span>
+                <span className="font-dancing" style={{ color: theme.primary }}>
+                  {name}
+                </span>
               </motion.h1>
             </div>
           </motion.div>

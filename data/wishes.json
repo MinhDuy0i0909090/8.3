@@ -1,9 +1,9 @@
 [
   {
     "slug": "thinh",
-    "name": "Thịnh",
-    "wish": "Chúc Thịnh luôn xinh đẹp, tự tin và hạnh phúc trong từng khoảnh khắc!",
-    "video": "/assets/tiktok_video_hd.mp4",
+    "name": "chị Thịnh",
+    "wish": "Ngày 8/3 là dịp để nhắc rằng công ty Azvidi đang có một chị Thịnh là một người phụ nữ tuyệt vời. Mong rằng mọi ước mơ chị đang theo đuổi đều dần thành hiện thực. Hãy tiếp tục bước đi với sự tự tin và bản lĩnh, chơi hết nấc và tỏa sáng theo cách riêng của mình. Những điều tốt đẹp luôn dành cho người không ngừng cố gắng. Chúc chị một ngày thật ý nghĩa. 🌟",
+    "video": "/assets/chiThinh.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FADADD, #FFE5EC)",
       "primary": "#F4A6B8",
@@ -14,9 +14,9 @@
   },
   {
     "slug": "thuy",
-    "name": "Thuý",
-    "wish": "Gửi đến Thuý những lời chúc ngọt ngào nhất. Mong em luôn được yêu thương!",
-    "video": "https://assets.mixkit.co/videos/preview/mixkit-heart-shaped-balloons-floating-in-the-blue-sky-4241-large.mp4",
+    "name": "chị Thuý",
+    "wish": "Nhân ngày 8/3, anh em Azvidi chúc chị Thuý luôn giữ được sự rạng rỡ và năng lượng tích cực trong mọi việc mình làm. Mong rằng mỗi ngày đều mang đến cho chị thêm những niềm vui nhỏ và những cơ hội mới. Dù cuộc sống có bận rộn thế nào, hy vọng chị Thuý vẫn luôn dành thời gian để yêu thương bản thân. Vì khi chị hạnh phúc, mọi thứ xung quanh cũng trở nên đẹp hơn. Chúc chị một ngày 8/3 thật trọn vẹn và ý nghĩa. 🌸✨",
+    "video": "/assets/chiThuy.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5B4, #FADADD)",
       "primary": "#FFB7C5",
@@ -27,9 +27,9 @@
   },
   {
     "slug": "trang",
-    "name": "Trang",
-    "wish": "Chúc Trang luôn dịu dàng, an yên và gặp thật nhiều điều tốt đẹp!",
-    "video": "https://assets.mixkit.co/videos/preview/mixkit-red-and-gold-chinese-new-year-lanterns-hanging-9162-large.mp4",
+    "name": "chị Trang",
+    "wish": "Anh em Azvidi chúc chị Trang ngày 8/3 rạng rỡ như ánh mặt trời, còn áp lực công việc thì nhẹ như mây bay. Chúc chị không chỉ hôm nay mà 364 ngày còn lại luôn xinh đẹp, tự tin và... deadline không bao giờ dí kịp!🌸",
+    "video": "/assets/chiTrang.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #F3D1F4, #FFE5EC)",
       "primary": "#D18CE0",
@@ -40,9 +40,9 @@
   },
   {
     "slug": "lanh",
-    "name": "Lành",
-    "wish": "Chúc Lành luôn rạng rỡ, yêu đời và tràn đầy năng lượng tích cực!",
-    "video": "",
+    "name": "chị Lành",
+    "wish": "Anh em Azvidi chúc chị Lành một ngày 8/3 thật dịu dàng và bình yên. Mong rằng những điều nhỏ bé trong cuộc sống cũng đủ khiến chị Lành mỉm cười. Dù ngày hôm nay hay bất kỳ ngày nào khác, hy vọng chị Lành luôn được yêu thương và trân trọng. Cuộc sống sẽ luôn đẹp hơn khi chị Lành ở đó. 🌸✨",
+    "video": "/assets/chiLanh.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFF0F5, #FADADD)",
       "primary": "#F2A1C7",
@@ -53,9 +53,9 @@
   },
   {
     "slug": "le",
-    "name": "Lệ",
-    "wish": "Chúc Lệ luôn nhẹ nhàng, tinh tế và hạnh phúc theo cách riêng!",
-    "video": "",
+    "name": "chị Lệ",
+    "wish": "Nhân ngày 8/3, anh em Azvidi xin gửi lời cảm ơn đến chị Lệ – vì sự tận tâm và những điều tuyệt vời chị Lệ mang đến cho công ty. Chị Lệ xứng đáng nhận lại thật nhiều yêu thương và trân trọng. Hy vọng hôm nay sẽ là một ngày thật đặc biệt với chị. Chúc chị thật hạnh phúc. 🌼",
+    "video": "/assets/chiLe.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
       "primary": "#FFB5C2",
@@ -66,9 +66,9 @@
   },
   {
     "slug": "tuyet",
-    "name": "Tuyết",
-    "wish": "Chúc Tuyết luôn bình an, xinh đẹp và vững vàng trên hành trình của mình!",
-    "video": "",
+    "name": "chị Tuyết",
+    "wish": "Nhân 8/3 anh em Azvidi chúc chị Tuyết luôn xinh đẹp, tự tin và tràn đầy năng lượng. Mong rằng mỗi ngày mới đều mang đến thêm những cơ hội mới, tràn đầy yêu thương và bình yên. Hãy tiếp tục sống rực rỡ theo cách của riêng mình, chị nhé . Chúc chị Tuyết một ngày thật tuyệt vời. 🌸✨",
+    "video": "/assets/chiTuyet.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FADADD, #F3D1F4)",
       "primary": "#E6A0C4",
@@ -79,9 +79,9 @@
   },
   {
     "slug": "hoa",
-    "name": "Hoa",
-    "wish": "Chúc Hoa luôn tỏa sáng, dịu dàng và đầy nữ tính!",
-    "video": "",
+    "name": "bé Hoa",
+    "wish": "Nhân ngày 8/3, anh em Azvidi chúc bé Hoa luôn giữ được sự tự tin và khí chất rất riêng của mình. Mong rằng mỗi bước đi của Hoa đều mang lại những thành tựu đáng tự hào. Cuộc sống đôi khi bận rộn, nhưng hy vọng Hoa luôn tìm thấy những khoảnh khắc thật đẹp cho riêng mình. Hoa xứng đáng với những điều tốt đẹp nhất. Chúc Hoa một ngày 8/3 thật đáng nhớ. ✨🌸",
+    "video": "/assets/Hoa.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFF4CC, #FFE5EC)",
       "primary": "#FFD966",
@@ -92,9 +92,9 @@
   },
   {
     "slug": "phuong",
-    "name": "Phương",
-    "wish": "Chúc Phương luôn xinh đẹp, mạnh mẽ và yêu thương chính mình!",
-    "video": "",
+    "name": "chị Phương",
+    "wish": "Anh em Azvidi chúc chị một ngày 8/3 thật nhiều niềm vui và nhiều tiếng cười. Mong rằng mọi dự định của chị Phương đều thuận lợi và suôn sẻ. Nếu có những ngày bận rộn, hy vọng chị vẫn tìm được niềm vui trong những điều nhỏ bé. Cuộc sống luôn có những điều dễ thương chờ chị khám phá. Chúc chị một ngày thật vui. 🌸",
+    "video": "/assets/chiPhuong.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FADADD)",
       "primary": "#F7A1B5",
@@ -105,9 +105,9 @@
   },
   {
     "slug": "giang",
-    "name": "Giang",
-    "wish": "Chúc Giang luôn dịu dàng, an nhiên và tràn đầy yêu thương!",
-    "video": "",
+    "name": "chị Giang",
+    "wish": "Anh em Azvidi chúc chị Giang một 8/3 nhẹ như nắng sớm và dịu như một cơn gió chiều. Mong rằng mỗi ngày của Giang đều có thêm một lý do để mỉm cười. Cuộc sống đôi khi nhiều lo toan, nhưng hy vọng bạn luôn giữ được sự bình yên trong lòng. Vì khi bạn cười, thế giới cũng trở nên đẹp hơn. Chúc bạn thật nhiều niềm vui. 🌷",
+    "video": "/assets/chiGiang.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #F3D1F4, #FFF0F5)",
       "primary": "#D9A0E5",
@@ -118,9 +118,9 @@
   },
   {
     "slug": "linh",
-    "name": "Linh",
-    "wish": "Chúc Linh luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
-    "video": "",
+    "name": "chị Linh",
+    "wish": "Nhân ngày 8/3, anh em Azvidi chúc chị luôn mạnh khỏe, bình an và luôn rạng rỡ như những đóa hoa đẹp nhất. Mong rằng mỗi ngày của chị đều tràn đầy niềm vui và hạnh phúc bên gia đình. Cảm ơn chị vì sự dịu dàng, bao dung và những dĩa trái cây mà chị đã mang đến cho mọi người.🌟",
+    "video": "/assets/chiLinh.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
       "primary": "#FF9EB5",
@@ -132,8 +132,8 @@
   {
     "slug": "hong",
     "name": "Hồng",
-    "wish": "Chúc Hồng luôn xinh đẹp, tự tin và tỏa sáng theo cách riêng!",
-    "video": "",
+    "wish": "Chúc chị Hồng một ngày 8/3 thật rực rỡ và tràn đầy năng lượng. Mong rằng hôm nay sẽ có thật nhiều điều khiến chị mỉm cười. Chúc chị luôn mạnh khỏe, bình an và hạnh phúc. Mong rằng mỗi ngày trôi qua đều mang đến cho chị thật nhiều niềm vui, tiếng cười và những điều tốt đẹp trong cuộc sống. Chúc chị Hồng một ngày thật đáng nhớ. ✨",
+    "video": "/assets/chiHong.mp4",
     "theme": {
       "background": "linear-gradient(to bottom right, #FFE5EC, #FFF4E6)",
       "primary": "#FF9EB5",
