@@ -744,7 +744,7 @@ export default function DynamicWishPage() {
                 <div className="envelope__side-left"></div>
                 <div className="envelope__side-right"></div>
                 <div className="letter flex flex-col items-center">
-                  <p className="text-zinc-800 text-2xl leading-relaxed font-dancing whitespace-pre-wrap typing-cursor mb-auto">
+                  <p className="text-zinc-800 text-2xl leading-relaxed font-playfair whitespace-pre-wrap typing-cursor mb-auto">
                     {textVisible}
                   </p>
                   <AnimatePresence>
